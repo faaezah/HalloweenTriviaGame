@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- I needed help with writing CSS so AI helped me ONLY with this part but I did modify this code to help it look better -->
+    <style>
+        body {
+     max-width: 700px;
+     margin: 100px auto;
+     padding: 50px;
+     border-radius: 15px;
+     background: #FFA500;
+     text-align: center;
+   }
+
+   #overlay {
+     display: none;
+     position: fixed;
+     inset: 0;
+     z-index: 10;
+     align-items: center;
+     justify-content: center;
+     background-color: #FFA756;
+     background-image: radial-gradient(#6b3b25 3px, transparent 3px);
+     background-size: 100px 100px;
+     background-image: radial-gradient(#6b3b25 3px, transparent 3px);
+    background-size: 30px 30px;
+   }
+
+   #makeBetter {
+     max-width: 500px;
+     margin: 20px;
+     padding: 40px;
+     border-radius: 15px;
+     background: #FFF3D6;
+     text-align: center;
+     font-size: 1.2rem;
+     white-space: pre-line;
+   }
+    </style>
+    <meta charset="UTF-8">
+    <title>Unexpected Halloween Game</title>
+</head>
+<body>
+<!--forgot to write the div -->
+<div id="overlay">
+    <p id="makeBetter"></p>
+</div>
+<h1> Welcome to this game! Depending on what you choose you will be answer COMPLETELY DIFFERENT QUESTIONS! Crazy, right?</h1>
+<p id="hallMsg"></p>
+<script>
+    //needed help with this because I had no clue how to fix the white page showing error
+    setTimeout(function () {
+let makeBetter = document.getElementById("makeBetter");
+let namePerson = prompt("Hi, what is your name?");
+let responseUser = prompt(namePerson + ", Are you ready (Y/N)");
+
+if(responseUser === "Y"){
+let ratingUser = Number(prompt("Rate how you feel 1 is worst and 5 is best (1-5) NUMBERS ONLY!!"));
+    if(ratingUser == 1){
+        makeBetter.textContent = "I'm sorry you are having a bad day. Take a walk if you can.";
+    } else if (ratingUser == 2){
+        makeBetter.textContent = "Remember, it's okay for life to have its ups and downs you got this!";
+    } else if(ratingUser == 3){
+        makeBetter.textContent = "Feeling in the middle? Me too girl!";
+    } else if(ratingUser == 4){
+        makeBetter.textContent = "Yay! Glad to hear! Hope you have a wonderful rest of your day";
+    } else if (ratingUser == 5) {
+        makeBetter.textContent = "Keep up the positivity!!";
+    } else {
+        makeBetter.textContent = "Invalid Choice :((";
+    }
+
+} else {
+makeBetter.textContent = "You got the halloween version theme of the game! (the hidden game haha!!)"
+let candyChoice = prompt("Would you rather eat CANDY CORNS or SNICKERS (ALL CAPS PLEASE) ");
+    if(candyChoice === "CANDY CORNS"){
+        makeBetter.textContent = "Candy Corns are not my favorite ,but they are pretty good still. \n\n";
+    } else if (candyChoice === "SNICKERS") {
+        makeBetter.textContent = "Snicker are the perfect balance of sweet and salty! \n\n";
+    } else {
+        makeBetter.textContent = "Neither candy! Wow, well alright. \n\n";
+    }
+let halOp = prompt("Last Question: Is Halloween your favorite holiday? (Y/N) \n\n");
+/* forgot javascript does not use .equals() */
+    if(halOp === "Y"){
+        makeBetter.textContent += "Yayy, Halloween really is the best holiday! \n\n";
+    } else {
+        makeBetter.textContent += "WHAT? Halloween is the BEST HOLIDAY - Yes is the right answer (I am just joking!!) \n\n";
+}
+
+makeBetter.textContent += "Thank you for playing! It was really fun! \n\n";
+
+}
+
+document.getElementById("overlay").style.display = "flex";
+ document.getElementById("overlay").style.display = "flex";
+}, 100);
+</script>
+
+</body>
+</html>

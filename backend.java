@@ -1,4 +1,7 @@
 import java.util.Scanner;
+//Initially wrote this all in Java aiming to run it but I did not know I could not run Java files directly on the browsers
+//Hence, I remodeled everything to write it in javascript using essentially the same structure with some CSS
+//Enjoy the game! Happy Halloween!
 public class backend {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
